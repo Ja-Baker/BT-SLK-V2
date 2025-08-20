@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLK Curriculum Planning Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Header -->
+        <header class="nav-header">
+            <button class="back-btn" id="backBtn" style="display: none;">← Back</button>
+            <h1 class="site-title">SLK Curriculum Planning Tool</h1>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="content">
+            <!-- Home Page -->
+            <div id="homePage" class="page active">
+                <div class="welcome-section">
+                    <h2>Welcome to the SLK Modular Therapy Curriculum!</h2>
+                    <p>Use the buttons below to access the curriculums.</p>
+                </div>
+
+                <div class="main-buttons">
+                    <button class="primary-btn" onclick="showPage('decisionGuide')">
+                        Use the Decision Guide to Find a Curriculum
+                    </button>
+                    <button class="primary-btn" onclick="showPage('jumpToCurriculum')">
+                        Jump Straight to a Specific Curriculum or Skill
+                    </button>
+                </div>
+
+                <hr class="section-divider">
+
+                <div class="resource-section">
+                    <h3>Caregiver/Educator Input Forms:</h3>
+                    <p>Download screening checklists that you can use to gather input from caregivers and classroom teachers.</p>
+                    <button class="secondary-btn" onclick="showPage('checklists')">Access the Checklists</button>
+                </div>
+
+                <div class="resource-section">
+                    <h3>Handouts:</h3>
+                    <p>Download caregiver and educator handouts with communication supports for specific conditions.</p>
+                    <button class="secondary-btn" onclick="showPage('handouts')">Access the Handouts</button>
+                </div>
+
+                <div class="resource-section">
+                    <h3>Visual Supports:</h3>
+                    <p>Download visual cues and aids that you can use to support children with communication challenges.</p>
+                    <button class="secondary-btn" onclick="showPage('visuals')">Access the Visuals</button>
+                </div>
+            </div>
+
+            <!-- Decision Guide Page -->
+            <div id="decisionGuide" class="page">
+                <h2>Let's get started!</h2>
+                <p>Answer the questions below to discover the right curriculum for this individual.</p>
+                
+                <div class="question-box">
+                    <p><strong>Is the individual able to communicate using words?</strong></p>
+                    <p>Can they effectively communicate at least 50 different ideas or messages using some form of intentional communication (spoken words, sign language, or an alternative means like pointing at pictures or using a communication device)?</p>
+                    
+                    <div class="button-group">
+                        <button class="choice-btn yes-btn" onclick="showPage('noFunctionalComm')">Yes</button>
+                        <button class="choice-btn no-btn" onclick="showPage('needsFunctionalComm')">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jump to Curriculum Page -->
+            <div id="jumpToCurriculum" class="page">
+                <h2>Jump Straight to a Specific Curriculum or Skill</h2>
+                <p>Select a curriculum area below:</p>
+                
+                <div class="curriculum-grid">
+                    <button class="curriculum-btn" onclick="showPage('needsFunctionalComm')">Functional Communication</button>
+                    <button class="curriculum-btn" onclick="showPage('speechSounds')">Speech Sounds</button>
+                    <button class="curriculum-btn" onclick="showPage('language')">Language</button>
+                    <button class="curriculum-btn" onclick="showPage('voiceResonance')">Voice/Resonance</button>
+                    <button class="curriculum-btn" onclick="showPage('socialCommunication')">Social Communication</button>
+                    <button class="curriculum-btn" onclick="showPage('fluency')">Fluency</button>
+                </div>
+            </div>
+
+            <!-- Checklists Page -->
+            <div id="checklists" class="page">
+                <h2>Screening Checklists</h2>
+                <p>Download screening checklists to gather input from caregivers and classroom teachers.</p>
+                <div class="download-section" id="checklistsContent" data-bt="8008">
+                    <div class="loading-content">Loading screening checklists...</div>
+                </div>
+            </div>
+
+            <!-- Handouts Page -->
+            <div id="handouts" class="page">
+                <h2>Handouts</h2>
+                <p>Download caregiver and educator handouts with communication supports for specific conditions.</p>
+                <div class="download-section" id="handoutsContent" data-bt="8008">
+                    <div class="loading-content">Loading caregiver handouts...</div>
+                </div>
+            </div>
+
+            <!-- Visuals Page -->
+            <div id="visuals" class="page">
+                <h2>Visual Supports</h2>
+                <p>Download visual cues and aids to support children with communication challenges.</p>
+                <div class="download-section" id="visualsContent" data-bt="8008">
+                    <div class="loading-content">Loading visual supports...</div>
+                </div>
+            </div>
+
+            <!-- No Functional Communication Page -->
+            <div id="noFunctionalComm" class="page">
+                <h2>Which area do you think the individual needs to focus on the most right now?</h2>
+                <p>There's no one right or wrong answer here. Try to choose an area that is causing the most frustration for the individual or that would make the biggest impact in being able to communicate effectively with others.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Speech Sounds</h3>
+                        <ul>
+                            <li>Speech is difficult to understand</li>
+                            <li>Says specific sounds incorrectly</li>
+                            <li>Leaves off sounds from words</li>
+                            <li>Mumbles or slurs speech</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('speechSounds')">Choose Speech Sounds</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Language</h3>
+                        <ul>
+                            <li>Has trouble following directions</li>
+                            <li>Has trouble asking and answering questions</li>
+                            <li>Has trouble retelling stories or past events in a way that makes sense</li>
+                            <li>Has frequent grammar/syntax errors</li>
+                            <li>Has trouble with figurative or abstract language</li>
+                            <li>Has trouble with reading and writing</li>
+                            <li>Uses vague or imprecise language/words</li>
+                            <li>Doesn't know what things are called</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('language')">Choose Language</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Voice/Resonance</h3>
+                        <ul>
+                            <li>Voice quality sounds different from others (hoarse, raspy, breathy, gravelly, strained)</li>
+                            <li>Has differences in volume, rate, or pitch</li>
+                            <li>Voice sounds too nasal or like they have a stuffy nose</li>
+                            <li>Frequently loses their voice</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('voiceResonance')">Choose Voice/Resonance</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Social Communication</h3>
+                        <ul>
+                            <li>Does not respond to others when spoken to</li>
+                            <li>Struggles with initiating or maintaining conversations</li>
+                            <li>Struggles with building and maintaining friendships and relationships</li>
+                            <li>Has trouble self-calming when upset and navigating disagreements with others</li>
+                            <li>Has trouble speaking up for self</li>
+                            <li>Struggles with topic maintenance or providing relevant information</li>
+                            <li>Will speak in some situations but not in others</li>
+                            <li>Has trouble repairing a conversation when it breaks down</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('socialCommunication')">Choose Social Communication</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Fluency</h3>
+                        <ul>
+                            <li>Repeats sounds, syllables, words, or phrases when speaking</li>
+                            <li>Struggles to coordinate their breathing with their speech</li>
+                            <li>Has trouble with word-finding, may say the wrong word or use words like "stuff" and "that thing"</li>
+                            <li>Elongates sounds or seems to get stuck on them</li>
+                            <li>Gets anxious or frustrated by their disfluencies</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('fluency')">Choose Fluency</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Needs Functional Communication Page -->
+            <div id="needsFunctionalComm" class="page">
+                <h2>Let's Work on Functional Communication!</h2>
+                <p>Our first mission is to help this individual find a way to communicate their basic wants and needs. We call this functional communication.</p>
+                <p>Take a look through the options below and pick the area that feels like the best starting point for this individual. There's no perfect answer—just choose the one that seems most useful right now. If it's not quite the right fit, you can always come back and try a different path. Don't worry if every line doesn't match exactly—go with the one that fits best overall.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Early Interactions</h3>
+                        <ul>
+                            <li>Does not allow others to take turns with them in play</li>
+                            <li>Does not pay attention to others who try to interact with them</li>
+                            <li>Does not respond to others or turn when their name is called</li>
+                            <li>Struggles to follow one-step directions</li>
+                            <li>Struggles to follow multi-step directions</li>
+                            <li>Struggles to follow and participate in familiar routines</li>
+                            <li>Struggles to handle new routines or changes in routine</li>
+                            <li>Does not answer simple questions</li>
+                            <li>Does not engage in early social routines</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('earlyInteractions')">Choose Early Interactions</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Analytic Language Processors (ALPs)</h3>
+                        <ul>
+                            <li>Uses single words to communicate (e.g., "milk," "ball," "go") rather than long, memorized phrases</li>
+                            <li>Shows a gradual buildup of vocabulary, learning one word at a time instead of repeating whole scripts</li>
+                            <li>Attempts to combine words into short phrases as their vocabulary grows</li>
+                            <li>Does not rely on echolalia or repeating scripts to communicate</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('analyticLanguage')">Choose Analytic Language Processors</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Gestalt Language Processors (GLPs)</h3>
+                        <ul>
+                            <li>Speaks in full phrases or scripts they've heard before</li>
+                            <li>Uses melodic speech with varying intonation but may have unclear articulation</li>
+                            <li>May sound like they're "speaking gibberish" with lots of emotion or intonation variability</li>
+                            <li>Repeats phrases the same way every time they say it</li>
+                            <li>Loves songs, quotes, and categories like numbers, letters, or shapes</li>
+                            <li>Likes to play the same way every time or seems to re-enact the same scenes over again</li>
+                            <li>May get upset when others try to change the play or the routine</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('gestaltLanguage')">Choose Gestalt Language Processors</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Augmentative and Alternative Communication (AAC)</h3>
+                        <ul>
+                            <li>Uses gestures/behaviors to express what they want/need</li>
+                            <li>Uses sign language to express what they want/need</li>
+                            <li>Will point to pictures to show what they want/need</li>
+                            <li>Can use a communication device or other type of AAC system</li>
+                            <li>Speech is very hard to understand and/or they are making slow progress toward intelligible speech</li>
+                            <li>Gets frustrated because speech is not easily understood</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('aacCurriculum')">Choose Augmentative/Alternative Communication (AAC)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speech Sounds Page -->
+            <div id="speechSounds" class="page">
+                <h2>Let's Work on Speech Sounds</h2>
+                <p>Take a look through the options below and pick the area that feels like the best starting point for this individual.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Articulation</h3>
+                        <ul>
+                            <li>Says specific sounds incorrectly</li>
+                            <li>Some sounds are distorted or sound different than they should</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('articulation')">Choose Articulation</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Phonology</h3>
+                        <ul>
+                            <li>Leaves off sounds at certain positions of the word</li>
+                            <li>Has trouble with whole classes of sounds</li>
+                            <li>Can say certain sounds in some positions/words but not others</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('phonology')">Choose Phonology</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Cycles Approach for Phonology</h3>
+                        <ul>
+                            <li>Highly unintelligible (very difficult to understand)</li>
+                            <li>Frequently leave out or omit speech sounds</li>
+                            <li>Replace some sounds with other sounds</li>
+                            <li>Don't use very many different consonant sounds</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('cyclesPhonology')">Choose Cycles Approach for Phonology</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Motor Speech</h3>
+                        <ul>
+                            <li>Speech sound errors are inconsistent</li>
+                            <li>Has more trouble with sounds in longer words</li>
+                            <li>Seems to physically struggle to get the sounds out</li>
+                            <li>Sounds robotic/choppy</li>
+                            <li>Drooling or excessive saliva buildup</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('motorSpeech')">Choose Motor Speech</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Mumbling</h3>
+                        <ul>
+                            <li>Mumbles or slurs speech</li>
+                            <li>Speaks too quickly</li>
+                            <li>Speaks too quietly</li>
+                            <li>Can say sounds correctly in single words but intelligibility reduces in conversational speech</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('mumbling')">Choose Mumbling</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Page -->
+            <div id="language" class="page">
+                <h2>Let's Work on Language</h2>
+                <p>Take a look through the options below and pick the area that feels like the best starting point for this individual.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Following Directions</h3>
+                        <ul>
+                            <li>Struggles to follow one-step directions</li>
+                            <li>Struggles to follow multi-step directions</li>
+                            <li>Easily distracted when following directions</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('followingDirections')">Choose Following Directions</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Sequencing/Retelling</h3>
+                        <ul>
+                            <li>Struggles to retell a past event or story</li>
+                            <li>Events are out of order when retelling something</li>
+                            <li>Retellings start in the middle or don't provide enough background information</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('sequencing')">Choose Sequencing/Retelling</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Abstract Language</h3>
+                        <ul>
+                            <li>Struggles with figurative language (idioms, sarcasm, similes, metaphors, etc.)</li>
+                            <li>Struggles with making inferences</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('abstractLanguage')">Choose Abstract Language</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Vocabulary</h3>
+                        <ul>
+                            <li>Uses vague or imprecise language/words</li>
+                            <li>Has trouble following directions that contain unfamiliar words/concepts</li>
+                            <li>Doesn't know what things are called or struggles to understand words that they read/hear</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('vocabulary')">Choose Vocabulary</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Asking and Answering Questions</h3>
+                        <ul>
+                            <li>Has trouble answering basic wh- questions like "who, what, where," etc.</li>
+                            <li>Has trouble asking questions in a way that makes sense</li>
+                            <li>Struggles to answer questions about something they just heard</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('askingAnswering')">Choose Asking and Answering Questions</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Grammar/Syntax</h3>
+                        <ul>
+                            <li>Has syntax grammar errors in their conversational speech</li>
+                            <li>Speech sounds telegraphic (missing words or grammar so they sound choppy)</li>
+                            <li>Uses sentences/utterances that are shorter or less complex than others their age</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('grammarSyntax')">Choose Grammar/Syntax</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Language Foundations for Literacy</h3>
+                        <ul>
+                            <li>Struggles with phonological awareness skills (like rhyming, alliteration, etc.)</li>
+                            <li>Struggles with understanding texts</li>
+                            <li>Struggles to produce their own writings</li>
+                            <li>Not meeting literacy expectations in academic work/school</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('literacyFoundations')">Choose Foundations for Literacy</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Cycles Approach for Language</h3>
+                        <ul>
+                            <li>Struggles significantly with many of the above aspects of language</li>
+                            <li>Language skills are slightly delayed in several areas but are not significant enough to require intensive therapy on any one area</li>
+                            <li>Language struggles are impacting reading and writing skills in many ways</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('cyclesLanguage')">Choose Cycles Approach for Language</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice/Resonance Page -->
+            <div id="voiceResonance" class="page">
+                <h2>Let's Work on Voice/Resonance</h2>
+                <p>Take a look through the options below and pick the area that feels like the best starting point for this individual.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Foundations of Healthy Voice Use</h3>
+                        <ul>
+                            <li>Coughs or clears their throat frequently</li>
+                            <li>Frequently yells, screams, or cheers loudly</li>
+                            <li>Makes a lot of loud or harsh sound effects while playing</li>
+                            <li>Frequently speaks very loudly or in an unnatural speaking voice</li>
+                            <li>Frequently loses their voice</li>
+                            <li>Frequently breathes through the mouth instead of the nose</li>
+                            <li>Runs out of breath when speaking or lacks breath support</li>
+                            <li>Has noisy or effortful breathing during speech</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('healthyVoice')">Choose Healthy Voice Use</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Voice</h3>
+                        <ul>
+                            <li>Frequently speaks with a hoarse/raspy voice</li>
+                            <li>Frequently speaks with a breathy/airy voice</li>
+                            <li>Voice sounds like they are straining or forcing it out</li>
+                            <li>Voice often sounds gravelly, crackly, or growly</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('voice')">Choose Voice</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Resonance (Nasality)</h3>
+                        <ul>
+                            <li>Voice sounds too nasal or like they have a stuffy nose</li>
+                            <li>Sounds like they are talking through their nose</li>
+                            <li>Can hear air puffing or rattling in nose when they talk</li>
+                            <li>Speech sounds weak or muffled, especially on sounds like /p/, /t/, /k/</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('resonance')">Choose Resonance</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Prosody</h3>
+                        <ul>
+                            <li>Speech sounds choppy or robotic</li>
+                            <li>Trouble with volume (too loud or too quiet)</li>
+                            <li>Trouble with rate (too fast or too slow)</li>
+                            <li>Trouble with pitch (too high, too low, or monotone with no pitch variability)</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('prosody')">Choose Prosody</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Communication Page -->
+            <div id="socialCommunication" class="page">
+                <h2>Let's Work on Social Communication</h2>
+                <p>Take a look through the options below and pick the area that feels like the best starting point for this individual.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Social Awareness and Interaction</h3>
+                        <ul>
+                            <li>Does not respond to others or look when their name is called</li>
+                            <li>Struggles with joint attention and turn taking</li>
+                            <li>Has trouble with proximity/giving personal space</li>
+                            <li>Struggles to stay on topic or provide relevant information</li>
+                            <li>Has difficulty with perspective-taking or understanding others</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('socialAwareness')">Choose Social Awareness and Interaction</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Abstract Language</h3>
+                        <ul>
+                            <li>Trouble understanding and interpreting body language and other nonverbal communication</li>
+                            <li>Trouble with figurative language (idioms, sarcasm, similes/metaphors, etc.)</li>
+                            <li>Trouble making social inferences</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('abstractLanguageSocial')">Choose Abstract Language</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Selective Mutism</h3>
+                        <ul>
+                            <li>Will speak in some situations with some people but not in others</li>
+                            <li>Shows anxiety about speaking</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('selectiveMutism')">Choose Selective Mutism</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Emotional Regulation and Self-Advocacy</h3>
+                        <ul>
+                            <li>Has trouble self-calming when upset</li>
+                            <li>Has trouble managing highs and lows in mood and behavior</li>
+                            <li>Resorts to challenging/unexpected behaviors when struggling with social interactions</li>
+                            <li>Has trouble speaking up for what they need or taking action to get their needs met</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('emotionalRegulation')">Choose Emotional Regulation and Self Advocacy</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Conversational Skills</h3>
+                        <ul>
+                            <li>Struggles with initiating interactions with others</li>
+                            <li>Struggles with topic maintenance or providing relevant information during conversations</li>
+                            <li>Doesn't always speak up for what he/she wants or needs</li>
+                            <li>Has trouble continuing an interaction through responding, commenting, asking questions, etc.</li>
+                            <li>Has trouble repairing a conversation when it breaks down</li>
+                            <li>Has trouble navigating disagreements with others</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('conversationalSkills')">Choose Conversational Skills</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fluency Page -->
+            <div id="fluency" class="page">
+                <h2>Let's Work on Fluency</h2>
+                <p>Take a look through the options below and pick the area that feels like the best starting point for this individual.</p>
+                
+                <div class="area-selection">
+                    <div class="area-card">
+                        <h3>Foundations for Fluency</h3>
+                        <ul>
+                            <li>Seems unaware that they are stuttering or have disfluencies</li>
+                            <li>Seems upset by their stuttering/disfluencies</li>
+                            <li>Has negative thoughts about self or low self confidence due to stuttering/disfluencies</li>
+                            <li>Gets visibly anxious or upset when stuttering/having disfluencies</li>
+                            <li>Refuses to talk about their stuttering/disfluencies</li>
+                            <li>Struggles to coordinate breathing with speech</li>
+                            <li>Stops in the middle of sentences or phrases to breathe</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('foundationsFluency')">Choose Foundations for Fluency</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Word Finding/Word Retrieval</h3>
+                        <ul>
+                            <li>Overuses non-specific words like "that thing" and "stuff"</li>
+                            <li>Struggles to come up with the word they're looking for</li>
+                            <li>Sometimes says the wrong word for things</li>
+                            <li>Talks around words (ex: "the red fruit that grows on trees")</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('wordFinding')">Choose Word Finding/Word Retrieval</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Stuttering</h3>
+                        <ul>
+                            <li>Is younger than 5 years old with disfluency that comes and goes</li>
+                            <li>Repeats whole words and phrases or revises what they were saying frequently</li>
+                            <li>Uses filler words like "um, uh"</li>
+                            <li>Repeats parts of words or single sounds</li>
+                            <li>Elongates sounds</li>
+                            <li>Seems to get stuck where no sound is coming out</li>
+                            <li>Sometimes uses movements or muscle tension to seemingly "push" through moments of stuttering</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('stuttering')">Choose Stuttering</button>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Cluttering</h3>
+                        <ul>
+                            <li>Speaks very quickly, causing speech to become more disfluent</li>
+                            <li>Fluency improves when told to speak more slowly</li>
+                            <li>Leaves out many sounds or word endings in conversational speech</li>
+                            <li>Frequently uses filler words like "um" and "like"</li>
+                            <li>Often revises what they are saying mid-sentence</li>
+                        </ul>
+                        <button class="area-btn" onclick="showPage('cluttering')">Choose Cluttering</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BT-8008: Curriculum pages with functional content -->
+            <div id="earlyInteractions" class="page">
+                <h2>Early Interactions Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Early Interactions curriculum...</div>
+            </div>
+
+            <div id="analyticLanguage" class="page">
+                <h2>Analytic Language Processor Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Analytic Language Processor curriculum...</div>
+            </div>
+
+            <div id="gestaltLanguage" class="page">
+                <h2>Gestalt Language Processor Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Gestalt Language Processor curriculum...</div>
+            </div>
+
+            <div id="aacCurriculum" class="page">
+                <h2>AAC Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading AAC curriculum...</div>
+            </div>
+
+            <div id="articulation" class="page">
+                <h2>Articulation Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Articulation curriculum...</div>
+            </div>
+
+            <div id="phonology" class="page">
+                <h2>Phonology Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Phonology curriculum...</div>
+            </div>
+
+            <div id="cyclesPhonology" class="page">
+                <h2>Cycles Approach for Phonology</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Cycles Phonology curriculum...</div>
+            </div>
+
+            <div id="motorSpeech" class="page">
+                <h2>Motor Speech Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Motor Speech curriculum...</div>
+            </div>
+
+            <div id="mumbling" class="page">
+                <h2>Mumbling Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Mumbling curriculum...</div>
+            </div>
+
+            <div id="followingDirections" class="page">
+                <h2>Following Directions Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Following Directions curriculum...</div>
+            </div>
+
+            <div id="sequencing" class="page">
+                <h2>Sequencing/Retelling Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Sequencing curriculum...</div>
+            </div>
+
+            <div id="abstractLanguage" class="page">
+                <h2>Abstract Language Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Abstract Language curriculum...</div>
+            </div>
+
+            <div id="vocabulary" class="page">
+                <h2>Vocabulary Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Vocabulary curriculum...</div>
+            </div>
+
+            <div id="askingAnswering" class="page">
+                <h2>Asking and Answering Questions Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Questions curriculum...</div>
+            </div>
+
+            <div id="grammarSyntax" class="page">
+                <h2>Grammar/Syntax Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Grammar/Syntax curriculum...</div>
+            </div>
+
+            <div id="literacyFoundations" class="page">
+                <h2>Language Foundations for Literacy Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Literacy Foundations curriculum...</div>
+            </div>
+
+            <div id="cyclesLanguage" class="page">
+                <h2>Cycles Approach for Language</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Cycles Language curriculum...</div>
+            </div>
+
+            <div id="healthyVoice" class="page">
+                <h2>Foundations for Healthy Voice Use Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Healthy Voice Use curriculum...</div>
+            </div>
+
+            <div id="voice" class="page">
+                <h2>Voice Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Voice curriculum...</div>
+            </div>
+
+            <div id="resonance" class="page">
+                <h2>Resonance Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Resonance curriculum...</div>
+            </div>
+
+            <div id="prosody" class="page">
+                <h2>Prosody Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Prosody curriculum...</div>
+            </div>
+
+            <div id="socialAwareness" class="page">
+                <h2>Social Awareness and Interaction Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Social Awareness curriculum...</div>
+            </div>
+
+            <div id="abstractLanguageSocial" class="page">
+                <h2>Abstract Language (Social) Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Abstract Language (Social) curriculum...</div>
+            </div>
+
+            <div id="selectiveMutism" class="page">
+                <h2>Selective Mutism Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Selective Mutism curriculum...</div>
+            </div>
+
+            <div id="emotionalRegulation" class="page">
+                <h2>Emotional Regulation and Self-Advocacy Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Emotional Regulation curriculum...</div>
+            </div>
+
+            <div id="conversationalSkills" class="page">
+                <h2>Conversational Skills Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Conversational Skills curriculum...</div>
+            </div>
+
+            <div id="foundationsFluency" class="page">
+                <h2>Foundations for Fluency Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Foundations for Fluency curriculum...</div>
+            </div>
+
+            <div id="wordFinding" class="page">
+                <h2>Word Finding/Word Retrieval Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Word Finding curriculum...</div>
+            </div>
+
+            <div id="stuttering" class="page">
+                <h2>Stuttering Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Stuttering curriculum...</div>
+            </div>
+
+            <div id="cluttering" class="page">
+                <h2>Cluttering Curriculum</h2>
+                <div class="curriculum-loading" data-bt="8008">Loading Cluttering curriculum...</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="curriculum-content.js"></script>
+    <script src="curriculum-content-2.js"></script>
+    <script src="skill-pages-filler.js"></script>
+    <script src="sample-skill-content.js"></script>
+    <script src="functional-filler.js"></script>
+</body>
+</html>
