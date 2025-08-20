@@ -1,0 +1,14 @@
+{
+  "name": "bt-slk-v2-client",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "serve -s -l tcp://0.0.0.0:$PORT ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
