@@ -166,10 +166,10 @@ function replaceFunctionalChecklists() {
     if (downloadSection) {
         downloadSection.innerHTML = `
             <!-- BT-8008: Functional checklist downloads -->
-            <div style="margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 10px; border-left: 5px solid #007bff;">
-                <h3 style="color: #007bff; margin-top: 0;">📋 Step 1: Primary Screening Checklist</h3>
+            <div style="margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, #fce4ec, #f3e5f5); border-radius: 10px; border-left: 5px solid var(--pink);">
+                <h3 style="color: var(--pink); margin-top: 0;">📋 Step 1: Primary Screening Checklist</h3>
                 <p><strong>Start here!</strong> This is the main screening tool from the SLK curriculum to identify areas of concern.</p>
-                <button class="area-btn" style="background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 15px 30px; font-size: 18px;" 
+                <button class="primary-btn" style="padding: 15px 30px; font-size: 18px; margin-top: 10px;" 
                         onclick="downloadChecklist('screening-general')">
                     📋 Download the Main Screening Checklist (PDF)
                 </button>
@@ -275,8 +275,10 @@ function replaceFunctionalHandouts() {
     if (downloadSection) {
         downloadSection.innerHTML = `
             <!-- BT-8008: Functional handout downloads -->
-            <div style="margin-bottom: 20px;">
-                <button class="area-btn" style="background: linear-gradient(135deg, #ee4f9c, #b27ab4); color: white; padding: 15px 30px; font-size: 18px;" 
+            <div style="margin-bottom: 20px; padding: 20px; background: linear-gradient(135deg, #e3f2fd, #f3e5f5); border-radius: 10px; border-left: 5px solid var(--blue);">
+                <h3 style="color: var(--blue); margin-top: 0;">📚 Complete Handouts Library</h3>
+                <p>Access the full collection of caregiver and educator handouts from Speech and Language Kids.</p>
+                <button class="secondary-btn" style="padding: 15px 30px; font-size: 18px; margin-top: 10px;" 
                         onclick="window.open('https://hub.speechandlanguagekids.com/spaces/13217776/content', '_blank')">
                     📚 Access Full Handouts Library on SLK Website
                 </button>
@@ -376,8 +378,10 @@ function replaceFunctionalVisuals() {
     if (downloadSection) {
         downloadSection.innerHTML = `
             <!-- BT-8008: Functional visual support downloads -->
-            <div style="margin-bottom: 20px;">
-                <button class="area-btn" style="background: linear-gradient(135deg, #0093ac, #a0ce4e); color: white; padding: 15px 30px; font-size: 18px;" 
+            <div style="margin-bottom: 20px; padding: 20px; background: linear-gradient(135deg, #e8f5e8, #f3e5f5); border-radius: 10px; border-left: 5px solid var(--green);">
+                <h3 style="color: var(--green); margin-top: 0;">🎨 Complete Visual Supports Library</h3>
+                <p>Access the full collection of visual aids and supports from Speech and Language Kids.</p>
+                <button class="primary-btn" style="padding: 15px 30px; font-size: 18px; margin-top: 10px;" 
                         onclick="window.open('https://hub.speechandlanguagekids.com/spaces/17816743/content', '_blank')">
                     🎨 Access Full Visual Supports Library on SLK Website
                 </button>

@@ -3,18 +3,26 @@
 
 // Main PDF generation function that handles all download types
 function generateFunctionalPDF(type, resourceId) {
-    const pdfData = getPDFData(type, resourceId);
+    // Show immediate feedback
+    showDownloadMessage('Preparing download...', 'info');
     
-    if (pdfData && pdfData.url) {
-        // If we have a real URL (from the markdown spec), open it
-        window.open(pdfData.url, '_blank');
+    // Small delay to show the loading message
+    setTimeout(() => {
+        const pdfData = getPDFData(type, resourceId);
         
-        // Show success message
-        showDownloadMessage(`Opening ${pdfData.title}...`, 'success');
-    } else {
-        // Generate a placeholder PDF with content
-        generatePlaceholderPDF(type, resourceId);
-    }
+        if (pdfData && pdfData.url) {
+            // If we have a real URL (from the markdown spec), open it
+            try {
+                window.open(pdfData.url, '_blank');
+                showDownloadMessage(`Opening ${pdfData.title}`, 'success');
+            } catch (error) {
+                showDownloadMessage(`Error opening ${pdfData.title}. Please try again.`, 'error');
+            }
+        } else {
+            // Generate a placeholder PDF with content
+            generatePlaceholderPDF(type, resourceId);
+        }
+    }, 500);
 }
 
 // Get PDF data based on type and resource ID from the markdown specifications
@@ -137,35 +145,47 @@ function showDownloadMessage(message, messageType = 'info') {
         messageDiv.id = 'download-message';
         messageDiv.style.cssText = `
             position: fixed;
-            top: 20px;
+            top: 100px;
             right: 20px;
             padding: 15px 20px;
-            border-radius: 5px;
+            border-radius: 8px;
             color: white;
             font-weight: bold;
             z-index: 10000;
-            max-width: 300px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 350px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-family: 'Candara', 'Calibri', 'Arial', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            transform: translateX(400px);
         `;
         document.body.appendChild(messageDiv);
     }
     
-    // Set message type styles
+    // Set message type styles using the theme colors
     const styles = {
-        success: 'background-color: #4CAF50;',
-        info: 'background-color: #2196F3;',
-        warning: 'background-color: #FF9800;',
-        error: 'background-color: #f44336;'
+        success: 'background: linear-gradient(135deg, #a0ce4e, #8fb93e);',
+        info: 'background: linear-gradient(135deg, #0093ac, #007a8c);',
+        warning: 'background: linear-gradient(135deg, #ee4f9c, #d63384);',
+        error: 'background: linear-gradient(135deg, #dc3545, #b02a37);'
     };
     
-    messageDiv.style.cssText += styles[messageType] || styles.info;
+    messageDiv.style.cssText = messageDiv.style.cssText.replace(/background[^;]*;/g, '') + styles[messageType] || styles.info;
     messageDiv.textContent = message;
     messageDiv.style.display = 'block';
     
-    // Auto-hide after 5 seconds
+    // Animate in
     setTimeout(() => {
-        messageDiv.style.display = 'none';
-    }, 5000);
+        messageDiv.style.transform = 'translateX(0)';
+    }, 50);
+    
+    // Auto-hide after 4 seconds
+    setTimeout(() => {
+        messageDiv.style.transform = 'translateX(400px)';
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 300);
+    }, 4000);
 }
 
 // Download specific checklist types
