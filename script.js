@@ -137,6 +137,60 @@ function showSkill(skillId) {
     showPage(skillId);
 }
 
+// Function to show individual skill pages
+function showSkillPage(skillId) {
+    // Check if skillPagesContent is available
+    if (typeof skillPagesContent !== 'undefined' && skillPagesContent[skillId]) {
+        const skill = skillPagesContent[skillId];
+        const skillContent = document.getElementById('skillContent');
+        
+        if (skillContent) {
+            skillContent.innerHTML = `
+                <div class="skill-header">
+                    <h2>${skill.title}</h2>
+                    <p class="skill-category">Category: ${skill.category}</p>
+                    ${skill.externalLink ? `<a href="${skill.externalLink}" class="external-link" target="_blank">📖 View Full Article</a>` : ''}
+                </div>
+                <div class="skill-content">
+                    ${skill.content}
+                </div>
+                ${skill.activities ? `
+                    <div class="skill-activities">
+                        <h3>Activities</h3>
+                        ${skill.activities}
+                    </div>
+                ` : ''}
+                ${skill.materials ? `
+                    <div class="skill-materials">
+                        <h3>Materials Needed</h3>
+                        ${skill.materials}
+                    </div>
+                ` : ''}
+                ${skill.tips ? `
+                    <div class="skill-tips">
+                        <h3>Tips for Success</h3>
+                        ${skill.tips}
+                    </div>
+                ` : ''}
+            `;
+        }
+        
+        showPage('skillPage');
+    } else {
+        // Fallback if skill content is not available
+        const skillContent = document.getElementById('skillContent');
+        if (skillContent) {
+            skillContent.innerHTML = `
+                <div class="skill-header">
+                    <h2>${skillId.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</h2>
+                    <p>Skill content is loading...</p>
+                </div>
+            `;
+        }
+        showPage('skillPage');
+    }
+}
+
 // Helper function to create curriculum page structure
 function createCurriculumPage(pageId, title, description, levels) {
     const page = document.getElementById(pageId);

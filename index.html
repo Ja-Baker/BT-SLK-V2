@@ -576,161 +576,792 @@
             <!-- BT-8008: Curriculum pages with functional content -->
             <div id="earlyInteractions" class="page">
                 <h2>Early Interactions Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Early Interactions curriculum...</div>
+                <p>This curriculum will encourage the individual to engage, respond, and participate in social interactions.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Level 1 Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('respondingToName')">Responding to Name</button>
+                        <button class="skill-btn" onclick="showSkillPage('jointAttention')">Joint Attention</button>
+                        <button class="skill-btn" onclick="showSkillPage('turntaking')">Turntaking</button>
+                        <button class="skill-btn" onclick="showSkillPage('earlyGestures')">Early Gestures and Body Language</button>
+                        <button class="skill-btn" onclick="showSkillPage('earlyPlaySkills')">Early Play Skills</button>
+                        <button class="skill-btn" onclick="showSkillPage('sensorySocialPlay')">Sensory Social Play</button>
+                        <button class="skill-btn" onclick="showSkillPage('earlyImitation')">Early Imitation</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialRoutines')">Social Routines</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Level 2 Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('oneStepDirections')">Following One-Step Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('twoStepDirections')">Following Two-Step Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('multiStepDirections')">Following Multi-Step Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('answeringQuestions')">Answering Simple Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('familiarRoutines')">Familiar Routines</button>
+                        <button class="skill-btn" onclick="showSkillPage('newRoutines')">New/Changing Routines</button>
+                        <button class="skill-btn" onclick="showSkillPage('turntakingAdvanced')">Advanced Turntaking in Conversation</button>
+                    </div>
+                </div>
             </div>
 
             <div id="analyticLanguage" class="page">
                 <h2>Analytic Language Processor Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Analytic Language Processor curriculum...</div>
+                <p>This curriculum focuses on building communication skills for individuals who learn language analytically, word by word.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Level 1 Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('firstWords')">First Words</button>
+                        <button class="skill-btn" onclick="showSkillPage('functionalWords')">Functional Words</button>
+                        <button class="skill-btn" onclick="showSkillPage('requestingItems')">Requesting Items</button>
+                        <button class="skill-btn" onclick="showSkillPage('requestingActions')">Requesting Actions</button>
+                        <button class="skill-btn" onclick="showSkillPage('requestingHelp')">Requesting Help</button>
+                        <button class="skill-btn" onclick="showSkillPage('protesting')">Protesting</button>
+                        <button class="skill-btn" onclick="showSkillPage('commenting')">Commenting</button>
+                        <button class="skill-btn" onclick="showSkillPage('greetingSocial')">Greeting and Social Routines</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Level 2 Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('twoWordCombinations')">Two Word Combinations</button>
+                        <button class="skill-btn" onclick="showSkillPage('expandingUtterances')">Expanding Utterances</button>
+                        <button class="skill-btn" onclick="showSkillPage('askingQuestions')">Asking Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('earlyGrammar')">Early Grammar</button>
+                        <button class="skill-btn" onclick="showSkillPage('functionWords')">Function Words</button>
+                        <button class="skill-btn" onclick="showSkillPage('narrativeSkills')">Early Narrative Skills</button>
+                    </div>
+                </div>
             </div>
 
             <div id="gestaltLanguage" class="page">
                 <h2>Gestalt Language Processor Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Gestalt Language Processor curriculum...</div>
+                <p>This curriculum supports individuals who learn language in chunks or scripts and need to develop flexible, self-generated language.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Stage 1: Echolalia and Scripts</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('echolaliaSupport')">Supporting Echolalia</button>
+                        <button class="skill-btn" onclick="showSkillPage('scriptVariation')">Script Variation</button>
+                        <button class="skill-btn" onclick="showSkillPage('functionalScripts')">Functional Scripts</button>
+                        <button class="skill-btn" onclick="showSkillPage('scriptModeling')">Script Modeling</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Stage 2: Script Mixing</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('scriptMixing')">Script Mixing</button>
+                        <button class="skill-btn" onclick="showSkillPage('partialGestalt')">Partial Gestalt Units</button>
+                        <button class="skill-btn" onclick="showSkillPage('flexibleScripts')">Flexible Script Use</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Stage 3: Single Words</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('isolatedWords')">Isolated Words from Scripts</button>
+                        <button class="skill-btn" onclick="showSkillPage('newSingleWords')">New Single Words</button>
+                        <button class="skill-btn" onclick="showSkillPage('wordCombining')">Word Combining</button>
+                    </div>
+                </div>
             </div>
 
             <div id="aacCurriculum" class="page">
                 <h2>AAC Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading AAC curriculum...</div>
+                <p>This curriculum supports individuals who use Augmentative and Alternative Communication systems.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Foundation Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('aacBasics')">AAC System Basics</button>
+                        <button class="skill-btn" onclick="showSkillPage('deviceNavigation')">Device Navigation</button>
+                        <button class="skill-btn" onclick="showSkillPage('symbolSelection')">Symbol Selection</button>
+                        <button class="skill-btn" onclick="showSkillPage('messageFormation')">Message Formation</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Communication Functions</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('aacRequesting')">Requesting with AAC</button>
+                        <button class="skill-btn" onclick="showSkillPage('aacCommenting')">Commenting with AAC</button>
+                        <button class="skill-btn" onclick="showSkillPage('aacProtesting')">Protesting with AAC</button>
+                        <button class="skill-btn" onclick="showSkillPage('aacQuestioning')">Asking Questions with AAC</button>
+                        <button class="skill-btn" onclick="showSkillPage('aacSocializing')">Social Communication with AAC</button>
+                    </div>
+                </div>
             </div>
 
             <div id="articulation" class="page">
                 <h2>Articulation Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Articulation curriculum...</div>
+                <p>This curriculum targets specific speech sound errors and distortions.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Sound-Specific Training</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('rSound')">R Sound Production</button>
+                        <button class="skill-btn" onclick="showSkillPage('sSound')">S Sound Production</button>
+                        <button class="skill-btn" onclick="showSkillPage('lSound')">L Sound Production</button>
+                        <button class="skill-btn" onclick="showSkillPage('thSound')">TH Sound Production</button>
+                        <button class="skill-btn" onclick="showSkillPage('chSound')">CH/SH Sound Production</button>
+                        <button class="skill-btn" onclick="showSkillPage('fvSound')">F/V Sound Production</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Generalization Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('soundGeneralization')">Sound Generalization</button>
+                        <button class="skill-btn" onclick="showSkillPage('selfMonitoring')">Self-Monitoring</button>
+                        <button class="skill-btn" onclick="showSkillPage('carryover')">Carryover to Conversation</button>
+                    </div>
+                </div>
             </div>
 
             <div id="phonology" class="page">
                 <h2>Phonology Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Phonology curriculum...</div>
+                <p>This curriculum addresses phonological patterns and sound system errors.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Phonological Patterns</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('finalConsonants')">Final Consonant Deletion</button>
+                        <button class="skill-btn" onclick="showSkillPage('clusterReduction')">Cluster Reduction</button>
+                        <button class="skill-btn" onclick="showSkillPage('fronting')">Fronting Patterns</button>
+                        <button class="skill-btn" onclick="showSkillPage('stopping')">Stopping Patterns</button>
+                        <button class="skill-btn" onclick="showSkillPage('gliding')">Gliding Patterns</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Advanced Patterns</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('syllableStructure')">Syllable Structure</button>
+                        <button class="skill-btn" onclick="showSkillPage('vowelErrors')">Vowel Errors</button>
+                        <button class="skill-btn" onclick="showSkillPage('metathesis')">Metathesis</button>
+                    </div>
+                </div>
             </div>
 
             <div id="cyclesPhonology" class="page">
                 <h2>Cycles Approach for Phonology</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Cycles Phonology curriculum...</div>
+                <p>This curriculum uses a cyclical approach for highly unintelligible children with multiple phonological patterns.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Cycle 1: Foundation Patterns</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('cycle1Patterns')">Primary Patterns</button>
+                        <button class="skill-btn" onclick="showSkillPage('wordfinalConsonants')">Word-Final Consonants</button>
+                        <button class="skill-btn" onclick="showSkillPage('syllableShapes')">Basic Syllable Shapes</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Advanced Cycles</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('laterCycles')">Later Developing Sounds</button>
+                        <button class="skill-btn" onclick="showSkillPage('complexStructures')">Complex Sound Structures</button>
+                        <button class="skill-btn" onclick="showSkillPage('phonologicalAwareness')">Phonological Awareness Integration</button>
+                    </div>
+                </div>
             </div>
 
             <div id="motorSpeech" class="page">
                 <h2>Motor Speech Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Motor Speech curriculum...</div>
+                <p>This curriculum addresses motor planning and execution difficulties in speech production.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Motor Planning Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('oralMotor')">Oral Motor Skills</button>
+                        <button class="skill-btn" onclick="showSkillPage('speechSequencing')">Speech Sequencing</button>
+                        <button class="skill-btn" onclick="showSkillPage('prosodyMotor')">Prosody and Rhythm</button>
+                        <button class="skill-btn" onclick="showSkillPage('apraxiaStrategies')">Apraxia Strategies</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Movement Patterns</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('articulatorMovement')">Articulator Movement</button>
+                        <button class="skill-btn" onclick="showSkillPage('coordinationDrills')">Coordination Drills</button>
+                        <button class="skill-btn" onclick="showSkillPage('feedbackSystems')">Feedback Systems</button>
+                    </div>
+                </div>
             </div>
 
             <div id="mumbling" class="page">
                 <h2>Mumbling Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Mumbling curriculum...</div>
+                <p>This curriculum improves speech clarity and intelligibility for those who mumble or speak unclearly.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Clarity Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('articulationClarity')">Articulation Clarity</button>
+                        <button class="skill-btn" onclick="showSkillPage('speakingRate')">Speaking Rate Control</button>
+                        <button class="skill-btn" onclick="showSkillPage('volumeControl')">Volume Control</button>
+                        <button class="skill-btn" onclick="showSkillPage('precisionDrills')">Precision Drills</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Conversational Clarity</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('conversationalPace')">Conversational Pace</button>
+                        <button class="skill-btn" onclick="showSkillPage('clarificationStrategies')">Clarification Strategies</button>
+                        <button class="skill-btn" onclick="showSkillPage('intelligibilityMonitoring')">Intelligibility Monitoring</button>
+                    </div>
+                </div>
             </div>
 
             <div id="followingDirections" class="page">
                 <h2>Following Directions Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Following Directions curriculum...</div>
+                <p>This curriculum builds skills for understanding and following verbal instructions.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Basic Direction Following</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('oneStepDirections')">One-Step Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('twoStepDirections')">Two-Step Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('multiStepDirections')">Multi-Step Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('conditionalDirections')">Conditional Directions</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Complex Instructions</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('sequentialDirections')">Sequential Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('spatialDirections')">Spatial Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('temporalDirections')">Temporal Directions</button>
+                        <button class="skill-btn" onclick="showSkillPage('quantitativeDirections')">Quantitative Directions</button>
+                    </div>
+                </div>
             </div>
 
             <div id="sequencing" class="page">
                 <h2>Sequencing/Retelling Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Sequencing curriculum...</div>
+                <p>This curriculum develops skills for organizing and retelling events in logical order.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Basic Sequencing</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('pictureSequencing')">Picture Sequencing</button>
+                        <button class="skill-btn" onclick="showSkillPage('eventSequencing')">Event Sequencing</button>
+                        <button class="skill-btn" onclick="showSkillPage('dailyRoutineSequencing')">Daily Routine Sequencing</button>
+                        <button class="skill-btn" onclick="showSkillPage('storySequencing')">Story Sequencing</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Narrative Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('personalNarratives')">Personal Narratives</button>
+                        <button class="skill-btn" onclick="showSkillPage('storyRetelling')">Story Retelling</button>
+                        <button class="skill-btn" onclick="showSkillPage('procedural Narratives')">Procedural Narratives</button>
+                        <button class="skill-btn" onclick="showSkillPage('fictionalNarratives')">Fictional Narratives</button>
+                    </div>
+                </div>
             </div>
 
             <div id="abstractLanguage" class="page">
                 <h2>Abstract Language Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Abstract Language curriculum...</div>
+                <p>This curriculum develops understanding of figurative language, inferences, and abstract concepts.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Figurative Language</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('idioms')">Idioms</button>
+                        <button class="skill-btn" onclick="showSkillPage('metaphors')">Metaphors and Similes</button>
+                        <button class="skill-btn" onclick="showSkillPage('sarcasm')">Sarcasm and Humor</button>
+                        <button class="skill-btn" onclick="showSkillPage('proverbs')">Proverbs and Sayings</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Inference Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('pictureInferences')">Picture Inferences</button>
+                        <button class="skill-btn" onclick="showSkillPage('textInferences')">Text Inferences</button>
+                        <button class="skill-btn" onclick="showSkillPage('emotionalInferences')">Emotional Inferences</button>
+                        <button class="skill-btn" onclick="showSkillPage('predictiveInferences')">Predictive Inferences</button>
+                    </div>
+                </div>
             </div>
 
             <div id="vocabulary" class="page">
                 <h2>Vocabulary Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Vocabulary curriculum...</div>
+                <p>This curriculum expands word knowledge and semantic understanding.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Word Knowledge</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('basicVocabulary')">Basic Vocabulary</button>
+                        <button class="skill-btn" onclick="showSkillPage('categorization')">Categorization</button>
+                        <button class="skill-btn" onclick="showSkillPage('wordRelationships')">Word Relationships</button>
+                        <button class="skill-btn" onclick="showSkillPage('multipleWordMeanings')">Multiple Word Meanings</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Advanced Vocabulary</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('academicVocabulary')">Academic Vocabulary</button>
+                        <button class="skill-btn" onclick="showSkillPage('wordMorphology')">Word Morphology</button>
+                        <button class="skill-btn" onclick="showSkillPage('contextClues')">Context Clues</button>
+                        <button class="skill-btn" onclick="showSkillPage('vocabularyStrategies')">Vocabulary Strategies</button>
+                    </div>
+                </div>
             </div>
 
             <div id="askingAnswering" class="page">
                 <h2>Asking and Answering Questions Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Questions curriculum...</div>
+                <p>This curriculum develops skills for formulating and responding to various types of questions.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Basic Question Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('whQuestions')">WH- Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('yesNoQuestions')">Yes/No Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('askingForHelp')">Asking for Help</button>
+                        <button class="skill-btn" onclick="showSkillPage('askingForInformation')">Asking for Information</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Complex Question Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('inferentialQuestions')">Inferential Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('comprehensionQuestions')">Comprehension Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('openEndedQuestions')">Open-Ended Questions</button>
+                        <button class="skill-btn" onclick="showSkillPage('questionFormulation')">Question Formulation</button>
+                    </div>
+                </div>
             </div>
 
             <div id="grammarSyntax" class="page">
                 <h2>Grammar/Syntax Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Grammar/Syntax curriculum...</div>
+                <p>This curriculum targets grammatical structures and sentence formation skills.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Basic Grammar</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('nounVerb')">Noun-Verb Combinations</button>
+                        <button class="skill-btn" onclick="showSkillPage('pronouns')">Pronouns</button>
+                        <button class="skill-btn" onclick="showSkillPage('verbTenses')">Verb Tenses</button>
+                        <button class="skill-btn" onclick="showSkillPage('plurals')">Plurals</button>
+                        <button class="skill-btn" onclick="showSkillPage('possessives')">Possessives</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Complex Grammar</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('sentenceExpansion')">Sentence Expansion</button>
+                        <button class="skill-btn" onclick="showSkillPage('complexSentences')">Complex Sentences</button>
+                        <button class="skill-btn" onclick="showSkillPage('passiveVoice')">Passive Voice</button>
+                        <button class="skill-btn" onclick="showSkillPage('conditionals')">Conditionals</button>
+                    </div>
+                </div>
             </div>
 
             <div id="literacyFoundations" class="page">
                 <h2>Language Foundations for Literacy Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Literacy Foundations curriculum...</div>
+                <p>This curriculum builds language skills that support reading and writing development.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Phonological Awareness</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('rhyming')">Rhyming</button>
+                        <button class="skill-btn" onclick="showSkillPage('syllableAwareness')">Syllable Awareness</button>
+                        <button class="skill-btn" onclick="showSkillPage('phonemeAwareness')">Phoneme Awareness</button>
+                        <button class="skill-btn" onclick="showSkillPage('soundSegmentation')">Sound Segmentation</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Reading Comprehension</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('textComprehension')">Text Comprehension</button>
+                        <button class="skill-btn" onclick="showSkillPage('mainIdea')">Main Idea</button>
+                        <button class="skill-btn" onclick="showSkillPage('storyElements')">Story Elements</button>
+                        <button class="skill-btn" onclick="showSkillPage('criticalThinking')">Critical Thinking</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Writing Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('writtenExpression')">Written Expression</button>
+                        <button class="skill-btn" onclick="showSkillPage('sentenceWriting')">Sentence Writing</button>
+                        <button class="skill-btn" onclick="showSkillPage('paragraphWriting')">Paragraph Writing</button>
+                        <button class="skill-btn" onclick="showSkillPage('editingSkills')">Editing Skills</button>
+                    </div>
+                </div>
             </div>
 
             <div id="cyclesLanguage" class="page">
                 <h2>Cycles Approach for Language</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Cycles Language curriculum...</div>
+                <p>This curriculum uses a cyclical approach to address multiple language areas systematically.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Cycle 1: Foundation Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('languageCycle1')">Basic Language Structures</button>
+                        <button class="skill-btn" onclick="showSkillPage('vocabularyCycle1')">Core Vocabulary</button>
+                        <button class="skill-btn" onclick="showSkillPage('comprehensionCycle1')">Basic Comprehension</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Cycle 2: Expanding Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('languageCycle2')">Complex Structures</button>
+                        <button class="skill-btn" onclick="showSkillPage('narrativeCycle2')">Narrative Development</button>
+                        <button class="skill-btn" onclick="showSkillPage('literacyCycle2')">Literacy Integration</button>
+                    </div>
+                </div>
             </div>
 
             <div id="healthyVoice" class="page">
                 <h2>Foundations for Healthy Voice Use Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Healthy Voice Use curriculum...</div>
+                <p>This curriculum teaches healthy voice habits and vocal hygiene practices.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Voice Hygiene</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('voiceHygiene')">Voice Hygiene Education</button>
+                        <button class="skill-btn" onclick="showSkillPage('breathingSupport')">Breathing Support</button>
+                        <button class="skill-btn" onclick="showSkillPage('hydration')">Hydration and Health</button>
+                        <button class="skill-btn" onclick="showSkillPage('voiceRest')">Voice Rest Strategies</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Healthy Voice Habits</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('voiceVolume')">Appropriate Voice Volume</button>
+                        <button class="skill-btn" onclick="showSkillPage('voiceUsage')">Voice Usage Awareness</button>
+                        <button class="skill-btn" onclick="showSkillPage('throatClearing')">Reducing Throat Clearing</button>
+                        <button class="skill-btn" onclick="showSkillPage('voiceBreaks')">Managing Voice Breaks</button>
+                    </div>
+                </div>
             </div>
 
             <div id="voice" class="page">
                 <h2>Voice Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Voice curriculum...</div>
+                <p>This curriculum addresses voice quality disorders and vocal improvements.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Voice Quality</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('voiceQuality')">Voice Quality Improvement</button>
+                        <button class="skill-btn" onclick="showSkillPage('breathinessReduction')">Reducing Breathiness</button>
+                        <button class="skill-btn" onclick="showSkillPage('hoarsenessReduction')">Reducing Hoarseness</button>
+                        <button class="skill-btn" onclick="showSkillPage('vocalStrainReduction')">Reducing Vocal Strain</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Voice Production</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('easyOnset')">Easy Voice Onset</button>
+                        <button class="skill-btn" onclick="showSkillPage('resonantVoice')">Resonant Voice</button>
+                        <button class="skill-btn" onclick="showSkillPage('pitchControl')">Pitch Control</button>
+                        <button class="skill-btn" onclick="showSkillPage('loudnessControl')">Loudness Control</button>
+                    </div>
+                </div>
             </div>
 
             <div id="resonance" class="page">
                 <h2>Resonance Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Resonance curriculum...</div>
+                <p>This curriculum addresses nasality and resonance issues in speech production.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Resonance Control</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('nasalityReduction')">Reducing Hypernasality</button>
+                        <button class="skill-btn" onclick="showSkillPage('denasalityImprovement')">Improving Hyponasality</button>
+                        <button class="skill-btn" onclick="showSkillPage('oralResonance')">Oral Resonance</button>
+                        <button class="skill-btn" onclick="showSkillPage('velumControl')">Velum Control</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Speech Clarity</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('articulationResonance')">Articulation with Resonance</button>
+                        <button class="skill-btn" onclick="showSkillPage('speechPressure')">Speech Pressure</button>
+                        <button class="skill-btn" onclick="showSkillPage('resonanceMonitoring')">Resonance Monitoring</button>
+                    </div>
+                </div>
             </div>
 
             <div id="prosody" class="page">
                 <h2>Prosody Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Prosody curriculum...</div>
+                <p>This curriculum improves rhythm, stress, and intonation patterns in speech.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Prosodic Elements</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('speechRhythm')">Speech Rhythm</button>
+                        <button class="skill-btn" onclick="showSkillPage('stressPatterns')">Stress Patterns</button>
+                        <button class="skill-btn" onclick="showSkillPage('intonationPatterns')">Intonation Patterns</button>
+                        <button class="skill-btn" onclick="showSkillPage('speechTiming')">Speech Timing</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Expression and Emotion</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('emotionalProsody')">Emotional Prosody</button>
+                        <button class="skill-btn" onclick="showSkillPage('expressiveReading')">Expressive Reading</button>
+                        <button class="skill-btn" onclick="showSkillPage('conversationalProsody')">Conversational Prosody</button>
+                    </div>
+                </div>
             </div>
 
             <div id="socialAwareness" class="page">
                 <h2>Social Awareness and Interaction Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Social Awareness curriculum...</div>
+                <p>This curriculum builds foundational social communication and interaction skills.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Social Awareness</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('socialAttention')">Social Attention</button>
+                        <button class="skill-btn" onclick="showSkillPage('jointAttentionSocial')">Joint Attention</button>
+                        <button class="skill-btn" onclick="showSkillPage('perspectiveTaking')">Perspective Taking</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialCues')">Reading Social Cues</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Social Interaction</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('socialInitiation')">Social Initiation</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialResponse')">Social Response</button>
+                        <button class="skill-btn" onclick="showSkillPage('topicMaintenance')">Topic Maintenance</button>
+                        <button class="skill-btn" onclick="showSkillPage('personalSpace')">Personal Space</button>
+                    </div>
+                </div>
             </div>
 
             <div id="abstractLanguageSocial" class="page">
                 <h2>Abstract Language (Social) Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Abstract Language (Social) curriculum...</div>
+                <p>This curriculum develops understanding of abstract language concepts in social contexts.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Nonverbal Communication</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('bodyLanguage')">Body Language</button>
+                        <button class="skill-btn" onclick="showSkillPage('facialExpressions')">Facial Expressions</button>
+                        <button class="skill-btn" onclick="showSkillPage('gestureInterpretation')">Gesture Interpretation</button>
+                        <button class="skill-btn" onclick="showSkillPage('proxemics')">Proxemics</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Social Pragmatics</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('socialInferences')">Social Inferences</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialIdioms')">Social Idioms</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialSarcasm')">Social Sarcasm</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialHumor')">Social Humor</button>
+                    </div>
+                </div>
             </div>
 
             <div id="selectiveMutism" class="page">
                 <h2>Selective Mutism Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Selective Mutism curriculum...</div>
+                <p>This curriculum supports individuals who speak in some situations but not others due to anxiety.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Foundation Skills</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('comfortBuilding')">Building Comfort</button>
+                        <button class="skill-btn" onclick="showSkillPage('nonverbalCommunication')">Nonverbal Communication</button>
+                        <button class="skill-btn" onclick="showSkillPage('anxietyReduction')">Anxiety Reduction</button>
+                        <button class="skill-btn" onclick="showSkillPage('trustedPeople')">Expanding Trusted People</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Communication Expansion</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('graduatedExposure')">Graduated Exposure</button>
+                        <button class="skill-btn" onclick="showSkillPage('situationalSpeaking')">Situational Speaking</button>
+                        <button class="skill-btn" onclick="showSkillPage('confidenceBuilding')">Confidence Building</button>
+                        <button class="skill-btn" onclick="showSkillPage('generalizationStrategies')">Generalization Strategies</button>
+                    </div>
+                </div>
             </div>
 
             <div id="emotionalRegulation" class="page">
                 <h2>Emotional Regulation and Self-Advocacy Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Emotional Regulation curriculum...</div>
+                <p>This curriculum teaches self-regulation skills and advocacy strategies.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Emotional Regulation</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('emotionRecognition')">Emotion Recognition</button>
+                        <button class="skill-btn" onclick="showSkillPage('copingStrategies')">Coping Strategies</button>
+                        <button class="skill-btn" onclick="showSkillPage('selfCalming')">Self-Calming Techniques</button>
+                        <button class="skill-btn" onclick="showSkillPage('emotionalExpression')">Emotional Expression</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Self-Advocacy</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('needsIdentification')">Identifying Needs</button>
+                        <button class="skill-btn" onclick="showSkillPage('assertiveness')">Assertiveness Skills</button>
+                        <button class="skill-btn" onclick="showSkillPage('problemSolving')">Problem Solving</button>
+                        <button class="skill-btn" onclick="showSkillPage('conflictResolution')">Conflict Resolution</button>
+                    </div>
+                </div>
             </div>
 
             <div id="conversationalSkills" class="page">
                 <h2>Conversational Skills Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Conversational Skills curriculum...</div>
+                <p>This curriculum develops skills for initiating, maintaining, and managing conversations.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Conversation Basics</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('conversationInitiation')">Conversation Initiation</button>
+                        <button class="skill-btn" onclick="showSkillPage('conversationMaintenance')">Conversation Maintenance</button>
+                        <button class="skill-btn" onclick="showSkillPage('conversationTermination')">Conversation Termination</button>
+                        <button class="skill-btn" onclick="showSkillPage('turnTaking')">Turn Taking</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Advanced Conversation</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('conversationRepair')">Conversation Repair</button>
+                        <button class="skill-btn" onclick="showSkillPage('topicShifting')">Topic Shifting</button>
+                        <button class="skill-btn" onclick="showSkillPage('activeListening')">Active Listening</button>
+                        <button class="skill-btn" onclick="showSkillPage('socialValidation')">Social Validation</button>
+                    </div>
+                </div>
             </div>
 
             <div id="foundationsFluency" class="page">
                 <h2>Foundations for Fluency Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Foundations for Fluency curriculum...</div>
+                <p>This curriculum establishes foundational skills for fluent speech production.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Fluency Awareness</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('fluencyAwareness')">Fluency Awareness</button>
+                        <button class="skill-btn" onclick="showSkillPage('disfluencyAcceptance')">Disfluency Acceptance</button>
+                        <button class="skill-btn" onclick="showSkillPage('fluencySelfMonitoring')">Self-Monitoring</button>
+                        <button class="skill-btn" onclick="showSkillPage('confidenceBuilding')">Confidence Building</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Breathing and Voice</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('breathingCoordination')">Breathing Coordination</button>
+                        <button class="skill-btn" onclick="showSkillPage('voiceBreathSupport')">Voice-Breath Support</button>
+                        <button class="skill-btn" onclick="showSkillPage('relaxationTechniques')">Relaxation Techniques</button>
+                        <button class="skill-btn" onclick="showSkillPage('speechBreathing')">Speech Breathing</button>
+                    </div>
+                </div>
             </div>
 
             <div id="wordFinding" class="page">
                 <h2>Word Finding/Word Retrieval Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Word Finding curriculum...</div>
+                <p>This curriculum improves word retrieval and reduces word-finding difficulties.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Word Retrieval Strategies</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('retrievalStrategies')">Retrieval Strategies</button>
+                        <button class="skill-btn" onclick="showSkillPage('semanticCueing')">Semantic Cueing</button>
+                        <button class="skill-btn" onclick="showSkillPage('phoneticCueing')">Phonetic Cueing</button>
+                        <button class="skill-btn" onclick="showSkillPage('circumlocution')">Circumlocution</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Word Organization</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('wordAssociation')">Word Association</button>
+                        <button class="skill-btn" onclick="showSkillPage('semanticNetworks')">Semantic Networks</button>
+                        <button class="skill-btn" onclick="showSkillPage('categoryFluency')">Category Fluency</button>
+                        <button class="skill-btn" onclick="showSkillPage('rapidNaming')">Rapid Naming</button>
+                    </div>
+                </div>
             </div>
 
             <div id="stuttering" class="page">
                 <h2>Stuttering Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Stuttering curriculum...</div>
+                <p>This curriculum provides strategies and techniques for managing stuttering.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Stuttering Management</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('stutteringEducation')">Stuttering Education</button>
+                        <button class="skill-btn" onclick="showSkillPage('easyOnsets')">Easy Onsets</button>
+                        <button class="skill-btn" onclick="showSkillPage('lightContacts')">Light Contacts</button>
+                        <button class="skill-btn" onclick="showSkillPage('slowSpeech')">Slow Speech</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Modification Techniques</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('pullouts')">Pull-outs</button>
+                        <button class="skill-btn" onclick="showSkillPage('preparatorySet')">Preparatory Set</button>
+                        <button class="skill-btn" onclick="showSkillPage('cancellations')">Cancellations</button>
+                        <button class="skill-btn" onclick="showSkillPage('attitudeChange')">Attitude Change</button>
+                    </div>
+                </div>
             </div>
 
             <div id="cluttering" class="page">
                 <h2>Cluttering Curriculum</h2>
-                <div class="curriculum-loading" data-bt="8008">Loading Cluttering curriculum...</div>
+                <p>This curriculum addresses rapid, unclear speech and excessive disfluencies.</p>
+                
+                <div class="curriculum-section">
+                    <h3>Rate Control</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('rateReduction')">Rate Reduction</button>
+                        <button class="skill-btn" onclick="showSkillPage('pausingStrategies')">Pausing Strategies</button>
+                        <button class="skill-btn" onclick="showSkillPage('speechMonitoring')">Speech Monitoring</button>
+                        <button class="skill-btn" onclick="showSkillPage('rhythmTraining')">Rhythm Training</button>
+                    </div>
+                </div>
+                
+                <div class="curriculum-section">
+                    <h3>Clarity Enhancement</h3>
+                    <div class="skills-grid">
+                        <button class="skill-btn" onclick="showSkillPage('articulationClarity')">Articulation Clarity</button>
+                        <button class="skill-btn" onclick="showSkillPage('messageOrganization')">Message Organization</button>
+                        <button class="skill-btn" onclick="showSkillPage('linguisticAwareness')">Linguistic Awareness</button>
+                        <button class="skill-btn" onclick="showSkillPage('selfCorrectionStrategies')">Self-Correction Strategies</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Individual Skill Pages -->
+            <div id="skillPage" class="page skill-page">
+                <div id="skillContent">
+                    <!-- Skill content will be dynamically loaded here -->
+                </div>
             </div>
         </main>
     </div>
 
     <script src="script.js"></script>
-    <script src="curriculum-content.js"></script>
-    <script src="curriculum-content-2.js"></script>
-    <script src="skill-pages-filler.js"></script>
-    <script src="sample-skill-content.js"></script>
-    <script src="functional-filler.js"></script>
+    <script src="complete-curriculum-content.js"></script>
+    <script src="skill-pages-complete.js"></script>
+    <script src="pdf-downloads.js"></script>
 </body>
 </html>
