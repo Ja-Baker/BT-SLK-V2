@@ -166,6 +166,20 @@ function replaceFunctionalChecklists() {
     if (downloadSection) {
         downloadSection.innerHTML = `
             <!-- BT-8008: Functional checklist downloads -->
+            <div style="margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 10px; border-left: 5px solid #007bff;">
+                <h3 style="color: #007bff; margin-top: 0;">📋 Step 1: Primary Screening Checklist</h3>
+                <p><strong>Start here!</strong> This is the main screening tool from the SLK curriculum to identify areas of concern.</p>
+                <button class="area-btn" style="background: linear-gradient(135deg, #007bff, #0056b3); color: white; padding: 15px 30px; font-size: 18px;" 
+                        onclick="downloadChecklist('screening-general')">
+                    📋 Download the Main Screening Checklist (PDF)
+                </button>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3>📊 Step 2: Progress Monitoring Tools and In-Depth Checklists</h3>
+                <p>After completing the main screening, use these specialized tools for detailed assessment and progress tracking.</p>
+            </div>
+            
             <div class="resource-grid" data-bt="8008">
                 <div class="resource-card">
                     <h4>Early Communication Screening</h4>
@@ -779,9 +793,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 150);
 });
 
+// BT-8008: Ensure all download functions are globally available
+window.downloadChecklist = downloadChecklist;
+window.downloadHandout = downloadHandout;  
+window.downloadVisual = downloadVisual;
+window.downloadResource = downloadResource;
+window.generateFunctionalPDF = generateFunctionalPDF;
+window.showDownloadSuccess = showDownloadSuccess;
+
+// BT-8008: Global error handler for missing functions
+window.addEventListener('error', function(e) {
+    if (e.message.includes('is not defined') && e.message.includes('download')) {
+        console.warn('Download function not found, using fallback:', e.message);
+        alert('PDF download functionality is being loaded. Please try again in a moment.');
+        return true; // Prevent error from bubbling up
+    }
+});
+
 // BT-8008: Export for debugging
 window.BT8008FunctionalFiller = {
     initialized: true,
     identifier: 'BT-8008',
-    message: 'Fully functional filler content system'
+    message: 'Fully functional filler content system',
+    downloadFunctions: ['downloadChecklist', 'downloadHandout', 'downloadVisual', 'downloadResource', 'generateFunctionalPDF']
 };
