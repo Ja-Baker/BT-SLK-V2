@@ -19,6 +19,50 @@ const skillPagesContent = {
         `
     },
 
+    jointAttention: {
+        title: "Joint Attention",
+        category: "Early Interactions",
+        externalLink: "https://hub.speechandlanguagekids.com/posts/social-communication-skills-improving-joint-attention-and-turn-taking",
+        content: `
+            <p>Joint attention involves the ability to share focus on an object or event with another person. It's a foundational skill for social communication development.</p>
+            <h4>Key Components:</h4>
+            <ul>
+                <li>Following another person's gaze</li>
+                <li>Pointing to share interest</li>
+                <li>Looking between objects and people</li>
+                <li>Responding to pointing and gestures</li>
+            </ul>
+            <h4>Assessment Strategies:</h4>
+            <ul>
+                <li>Observe during play and daily routines</li>
+                <li>Note frequency and duration of joint attention episodes</li>
+                <li>Document use of pointing and gaze shifts</li>
+            </ul>
+        `
+    },
+
+    turntaking: {
+        title: "Turn Taking",
+        category: "Early Interactions", 
+        externalLink: "https://hub.speechandlanguagekids.com/posts/social-communication-skills-improving-joint-attention-and-turn-taking",
+        content: `
+            <p>Turn taking is essential for successful social interactions and conversations. This skill involves waiting for appropriate moments to communicate and respond.</p>
+            <h4>Key Activities:</h4>
+            <ul>
+                <li>Simple back-and-forth games (rolling ball, peek-a-boo)</li>
+                <li>Taking turns with toys and materials</li>
+                <li>Conversation turn-taking with visual supports</li>
+                <li>Musical turn-taking activities</li>
+            </ul>
+            <h4>Assessment Focus:</h4>
+            <ul>
+                <li>Ability to wait for turns</li>
+                <li>Understanding of turn-taking rules</li>
+                <li>Initiation vs. response in turn-taking</li>
+            </ul>
+        `
+    },
+
     jointAttentionTurnTaking: {
         title: "Joint Attention and Turn Taking",
         category: "Early Interactions",
@@ -471,6 +515,147 @@ const skillPagesContent = {
                 <li>Articulation precision work</li>
             </ul>
         `
+    },
+
+    // Additional Early Interactions Skills frequently called in curriculum
+    earlyGestures: {
+        title: "Early Gestures and Body Language",
+        category: "Early Interactions",
+        externalLink: "https://hub.speechandlanguagekids.com/posts/functional-communication-early-gestures",
+        content: `
+            <p>Early gestures are crucial pre-linguistic communication skills that help children express needs and wants before they can use words effectively.</p>
+            <h4>Key Gestures to Assess:</h4>
+            <ul>
+                <li>Pointing (imperative and declarative)</li>
+                <li>Waving hello/goodbye</li>
+                <li>Head nodding/shaking for yes/no</li>
+                <li>Reaching and showing behaviors</li>
+            </ul>
+        `
+    },
+
+    earlyPlaySkills: {
+        title: "Early Play Skills",
+        category: "Early Interactions",
+        externalLink: "https://hub.speechandlanguagekids.com/posts/early-play-skills",
+        content: `
+            <p>Play skills provide natural contexts for communication development and social interaction learning.</p>
+            <h4>Assessment Areas:</h4>
+            <ul>
+                <li>Functional toy use</li>
+                <li>Symbolic/pretend play</li>
+                <li>Social play with peers</li>
+                <li>Turn-taking in play activities</li>
+            </ul>
+        `
+    },
+
+    sensorySocialPlay: {
+        title: "Sensory Social Play",
+        category: "Early Interactions",
+        content: `
+            <p>Sensory social play combines sensory exploration with social interaction, helping children develop communication within engaging activities.</p>
+            <h4>Assessment Focus:</h4>
+            <ul>
+                <li>Engagement in sensory activities with others</li>
+                <li>Communication during sensory play</li>
+                <li>Tolerance for sensory input in social contexts</li>
+                <li>Use of communication to request sensory experiences</li>
+            </ul>
+        `
+    },
+
+    earlyImitation: {
+        title: "Early Imitation",
+        category: "Early Interactions",
+        content: `
+            <p>Imitation skills are fundamental for learning new behaviors and communication patterns through social modeling.</p>
+            <h4>Types of Imitation to Assess:</h4>
+            <ul>
+                <li>Motor imitation (actions with objects)</li>
+                <li>Facial imitation (expressions, mouth movements)</li>
+                <li>Vocal imitation (sounds, words)</li>
+                <li>Gestural imitation (hand movements, signs)</li>
+            </ul>
+        `
+    },
+
+    socialRoutines: {
+        title: "Social Routines",
+        category: "Early Interactions",
+        content: `
+            <p>Social routines provide predictable frameworks for communication and social interaction development.</p>
+            <h4>Key Routines to Assess:</h4>
+            <ul>
+                <li>Greeting and farewell routines</li>
+                <li>Mealtime social interactions</li>
+                <li>Bedtime and daily care routines</li>
+                <li>Play-based social routines</li>
+            </ul>
+        `
+    },
+
+    oneStepDirections: {
+        title: "Following One-Step Directions",
+        category: "Language Development",
+        externalLink: "https://hub.speechandlanguagekids.com/posts/functional-communication-following-directions-for-functional-communication",
+        content: `
+            <p>The ability to understand and follow simple one-step instructions is foundational for academic and social success.</p>
+            <h4>Assessment Protocol:</h4>
+            <ul>
+                <li>Test with familiar vs. unfamiliar actions</li>
+                <li>Vary complexity of vocabulary used</li>
+                <li>Assess with and without visual supports</li>
+                <li>Document consistency across contexts</li>
+            </ul>
+        `
+    },
+
+    twoStepDirections: {
+        title: "Following Two-Step Directions",
+        category: "Language Development", 
+        externalLink: "https://hub.speechandlanguagekids.com/posts/functional-communication-following-directions-for-functional-communication",
+        content: `
+            <p>Two-step directions require working memory and sequencing skills in addition to basic comprehension abilities.</p>
+            <h4>Assessment Considerations:</h4>
+            <ul>
+                <li>Related vs. unrelated action sequences</li>
+                <li>Use of temporal markers (first, then)</li>
+                <li>Processing time requirements</li>
+                <li>Support needs for success</li>
+            </ul>
+        `
+    },
+
+    multiStepDirections: {
+        title: "Following Multi-Step Directions",
+        category: "Language Development",
+        content: `
+            <p>Multi-step directions represent advanced language processing requiring strong working memory and executive function skills.</p>
+            <h4>Assessment Framework:</h4>
+            <ul>
+                <li>3+ step direction sequences</li>
+                <li>Complex conditional directions</li>
+                <li>Integration with academic tasks</li>
+                <li>Strategy use for remembering sequences</li>
+            </ul>
+        `
+    },
+
+    firstWords: {
+        title: "First Words Development",
+        category: "Analytic Language Processing",
+        externalLink: "https://hub.speechandlanguagekids.com/posts/first-words-development",
+        content: `
+            <p>First words mark an important milestone in expressive language development for analytic language processors.</p>
+            <h4>Assessment Framework:</h4>
+            <ul>
+                <li>Word inventory and categories</li>
+                <li>Communicative functions expressed</li>
+                <li>Phonological development patterns</li>
+                <li>Rate of vocabulary acquisition</li>
+            </ul>
+        `
     }
 };
 
@@ -535,6 +720,9 @@ const resourceContent = {
     }
 };
 
+// Make globally available for browser use
+window.skillPagesContent = skillPagesContent;
+
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -543,3 +731,5 @@ if (typeof module !== 'undefined' && module.exports) {
         resourceContent
     };
 }
+
+console.log('✅ Skill pages content loaded with', Object.keys(skillPagesContent).length, 'skills');

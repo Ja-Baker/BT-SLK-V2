@@ -1,13 +1,23 @@
 // BT-8008 Functional Filler Content
 // This file provides fully functional filler content for all resource pages and incomplete sections
 
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize immediately when script loads, or wait for DOM if needed
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            initializeFunctionalFiller();
+        }, 300);
+    });
+} else {
+    // DOM is already loaded, initialize immediately
     setTimeout(function() {
         initializeFunctionalFiller();
-    }, 300); // Increased delay to ensure all other scripts load first
-});
+    }, 300);
+}
 
 function initializeFunctionalFiller() {
+    console.log('🔧 Initializing functional filler content...');
+    
     // BT-8008: Replace resource page placeholders with functional content
     replaceFunctionalChecklists();
     replaceFunctionalHandouts(); 
@@ -162,8 +172,10 @@ function forceFillCurriculumPage(pageId) {
 
 // BT-8008: Functional Screening Checklists Page
 function replaceFunctionalChecklists() {
+    console.log('📋 Loading checklists content...');
     const downloadSection = document.getElementById('checklistsContent');
     if (downloadSection) {
+        console.log('✅ Found checklistsContent element, replacing content...');
         downloadSection.innerHTML = `
             <!-- BT-8008: Functional checklist downloads -->
             <div style="margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, #fce4ec, #f3e5f5); border-radius: 10px; border-left: 5px solid var(--pink);">

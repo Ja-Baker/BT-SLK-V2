@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize expandable sections if any exist
     initializeExpandableSections();
+    
+    // Debug: Check if skill pages content is loaded
+    setTimeout(() => {
+        if (typeof window.skillPagesContent !== 'undefined') {
+            console.log('✅ Skill pages content available with', Object.keys(window.skillPagesContent).length, 'skills');
+            console.log('Available skills:', Object.keys(window.skillPagesContent).slice(0, 10), '...');
+        } else {
+            console.warn('⚠️ Skill pages content not available yet');
+        }
+    }, 1000);
 });
 
 // Function to show a specific page
@@ -139,9 +149,16 @@ function showSkill(skillId) {
 
 // Function to show individual skill pages
 function showSkillPage(skillId) {
-    // Check if skillPagesContent is available
-    if (typeof skillPagesContent !== 'undefined' && skillPagesContent[skillId]) {
-        const skill = skillPagesContent[skillId];
+    // Wait for skillPagesContent to be loaded if not available yet
+    if (typeof window.skillPagesContent === 'undefined') {
+        console.log('Waiting for skill pages content to load...');
+        setTimeout(() => showSkillPage(skillId), 100);
+        return;
+    }
+    
+    // Check if skillPagesContent is available and has the requested skill
+    if (window.skillPagesContent && window.skillPagesContent[skillId]) {
+        const skill = window.skillPagesContent[skillId];
         const skillContent = document.getElementById('skillContent');
         
         if (skillContent) {
@@ -177,17 +194,30 @@ function showSkillPage(skillId) {
         
         showPage('skillPage');
     } else {
-        // Fallback if skill content is not available
+        // Create better fallback content if skill is not found
         const skillContent = document.getElementById('skillContent');
         if (skillContent) {
+            const skillTitle = skillId.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
             skillContent.innerHTML = `
                 <div class="skill-header">
-                    <h2>${skillId.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</h2>
-                    <p>Skill content is loading...</p>
+                    <h2>${skillTitle}</h2>
+                    <p class="skill-category">Assessment and Intervention Skill</p>
+                </div>
+                <div class="skill-content">
+                    <p>This skill page is part of the comprehensive SLK Curriculum Assessment Tool.</p>
+                    <h4>Key Focus Areas:</h4>
+                    <ul>
+                        <li>Assessment strategies and protocols</li>
+                        <li>Evidence-based intervention techniques</li>
+                        <li>Progress monitoring tools</li>
+                        <li>Home and school implementation</li>
+                    </ul>
+                    <p><strong>Note:</strong> Detailed content for this skill is being prepared. Please check back soon or contact your SLK curriculum administrator.</p>
                 </div>
             `;
         }
         showPage('skillPage');
+        console.warn(`Skill '${skillId}' not found in skillPagesContent`);
     }
 }
 
