@@ -739,6 +739,11 @@ function generateFunctionalDownload(fileName, description) {
     setTimeout(() => notification.remove(), 3000);
 }
 
+// BT-8008: Ensure skill download functions are globally available
+window.downloadSkillResource = downloadSkillResource;
+window.generateSkillReport = generateSkillReport;
+window.generateFunctionalDownload = generateFunctionalDownload;
+
 // BT-8008 - Export for debugging and future updates
 window.BT8008SkillPages = {
     initialized: true,

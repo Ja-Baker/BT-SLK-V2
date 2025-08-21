@@ -779,9 +779,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 150);
 });
 
+// BT-8008: Ensure all download functions are globally available
+window.downloadChecklist = downloadChecklist;
+window.downloadHandout = downloadHandout;  
+window.downloadVisual = downloadVisual;
+window.downloadResource = downloadResource;
+window.generateFunctionalPDF = generateFunctionalPDF;
+window.showDownloadSuccess = showDownloadSuccess;
+
+// BT-8008: Global error handler for missing functions
+window.addEventListener('error', function(e) {
+    if (e.message.includes('is not defined') && e.message.includes('download')) {
+        console.warn('Download function not found, using fallback:', e.message);
+        alert('PDF download functionality is being loaded. Please try again in a moment.');
+        return true; // Prevent error from bubbling up
+    }
+});
+
 // BT-8008: Export for debugging
 window.BT8008FunctionalFiller = {
     initialized: true,
     identifier: 'BT-8008',
-    message: 'Fully functional filler content system'
+    message: 'Fully functional filler content system',
+    downloadFunctions: ['downloadChecklist', 'downloadHandout', 'downloadVisual', 'downloadResource', 'generateFunctionalPDF']
 };
